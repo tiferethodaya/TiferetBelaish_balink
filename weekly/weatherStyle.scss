@@ -1,0 +1,72 @@
+@mixin dtStyle($Size : 15px) {
+    font-size: $Size;
+    font-weight: bold;
+}
+
+@mixin flexItem($Align : justify , $Left:0 , $Right:0 , $Top:0) {
+    text-align: $Align;
+    align-items: flex-end;
+    margin-left: $Left;
+    margin-right: $Right;
+    margin-top: $Top;
+}
+
+@mixin flexStyle($Direction : row) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $Direction; 
+}
+
+
+$Colors : lightskyblue;
+
+h1{
+@include flexStyle($Direction : column);
+   text-align: center;
+}
+
+h2{
+   @include flexItem( $Left: 5% );
+}
+
+h3{
+    @include dtStyle($Size : 22px);
+}
+
+dt{
+    @include dtStyle()
+}
+
+dd{
+    margin-inline-start: 0px;
+}
+ 
+.containerColumn{
+    @include flexStyle($Direction : column);
+}
+
+.containerRow{
+    @include flexStyle();
+    justify-content: space-around;
+}
+
+.itemRight{
+    @include flexItem($Align : right , $Right: 10px , $Top : 5px);
+}
+
+.colors{
+    color : $Colors;}
+
+
+.itemSelect{
+    width: 150px;
+  
+}
+.divSelect{
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+
+
+    

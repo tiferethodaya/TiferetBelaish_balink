@@ -1,0 +1,36 @@
+$Color1 : yellow;
+
+@mixin dtStyle($Size : 15px) {
+    font-size: $Size;
+    font-weight: bold;
+}
+
+
+h1{
+    display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+h2{
+    margin-left: 5%;
+}
+
+select{ 
+    margin-left: 80%;
+}
+
+dt{
+    @include dtStyle()
+}
+
+dd{
+     margin-inline-start: 0px;
+}
+
+.box{
+    margin-left: 5%;
+}
+
+
+
+    
